@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung lop mo ta Temperature</title>
+</head>
+<body>
+
+<script>
+    let Temperature = function (doC) {
+        this.doC = doC;
+
+        this.chuyenCsangF = function () {
+            return (this.doC * 1.8 + 32);
+        }
+        this.chuyenCsangK = function () {
+            return (this.doC + 273.15);
+        }
+    }
+
+    let inputFromKeyboard = prompt('Nhap do C');
+    let number = parseInt(inputFromKeyboard);
+    let doC = new Temperature(number);
+    document.write("Chuyen sang do F : " + doC.chuyenCsangF() + "<br>" + "Chuyen sang do K : " + doC.chuyenCsangK());
+</script>
+</body>
+</html>
